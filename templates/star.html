@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width,initial-scale=1" name="viewport">
+  <meta content="description" name="description">
+  <meta name="google" content="notranslate" />
+  <meta content="Mashup templates have been developped by Orson.io team" name="author">
+
+  <!-- Disable tap highlight on IE  -->
+  <meta name="msapplication-tap-highlight" content="no">
+  
+  <link rel="apple-touch-icon" sizes="180x180" href="./static/assets/apple-icon-180x180.png">
+  <link href="./static/assets/favicon.ico" rel="icon">
+
+  <style>
+    .tab-links {
+      display: flex;
+      margin-bottom: 20px;
+    }
+
+    .tab-link {
+      cursor: pointer;
+      font-size: 16px;
+      margin-right: 20px;
+    }
+
+    .tab-content {
+      display: none;
+      padding: 20px;
+      border: 1px solid #ccc;
+      background-color: #fff;
+    }
+    .search-bar {
+      display: flex;
+      align-items: center;
+      margin-top: 10px;
+      margin-left: 0px;
+    }
+    .search-input {
+      padding: 5px;
+      width: 200px;
+      border: 5px solid #ccc;
+      border-radius: 20px;
+    }
+     .highlight {
+      background-color: yellow;
+    }
+    .styled-button {
+      display: inline-block;
+      padding: 5px;
+      background-color: #3498db;
+      color: #ffffff;
+      border: none;
+      border-radius: 20px;
+      text-align: center;
+      text-decoration: none;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
+    }
+    
+    .styled-button:hover {
+      background-color: #2980b9;
+    }
+    .code-block {
+      background-color: #000000;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      overflow: auto;
+      flex: 1;
+      margin-right: 10px;
+    }
+    .code-block1 {
+      background-color: #000000;
+      padding: 90px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      overflow: auto;
+      flex: 1;
+      margin-right: 10px;
+    }
+    .code-example {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 20px;
+    }
+
+    .code-block code {
+      display: block;
+      padding: 0;
+      margin: 0;
+      font-family: "Courier New", monospace;
+      font-size: 14px;
+      color: #fff;
+      font-weight: bold;
+      font-size: 14px;
+      text-align: left;
+      white-space: pre-line;
+    }
+    .code-block1 code {
+      display: block;
+      padding: 0;
+      margin: 0;
+      font-family: "Courier New", monospace;
+      font-size: 14px;
+      color: #fff;
+      font-weight: bold;
+      font-size: 14px;
+      text-align: left;
+      white-space: pre-line;
+    }
+        .styled-button1 {
+          display: inline-block;
+      padding: 5px;
+      background-color: #3498db;
+      color: #ffffff;
+      border: none;
+      border-radius: 20px;
+      text-align: center;
+      text-decoration: none;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
+      margin-left: 30px;
+      vertical-align: middle;
+
+    }
+    .simple-text-section {
+    display: inline-block;
+    vertical-align: right;
+    margin-right: 20px;
+    font-size: 16px;
+  }
+  </style>
+  <title>Title page</title>  
+
+  <link href="./static/main.3f6952e4.css" rel="stylesheet">
+</head>
+
+<body class="">
+  <div id="site-border-left"></div>
+  <div id="site-border-right"></div>
+  <div id="site-border-top"></div>
+  <div id="site-border-bottom"></div>
+  
+  <header>
+    <nav class="navbar  navbar-fixed-top navbar-default">
+      <div class="container">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbar-collapse">
+          <ul class="nav navbar-nav ">
+            <li><a href="./work.html" title="">Home</a></li>          
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <div class="section-container">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="section-container-spacer text-center">
+            <h1 class="h2">Arrays</h1>
+          </div>
+                             
+            <div class="search-bar">
+              <input class="search-input" type="text" placeholder="Type your Question" id="searchInput">
+              <button class="styled-button" onclick="searchAndScroll()">Search</button>
+              <div style="display: flex; align-items: center; justify-content: space-between;">
+              <p style="margin-left: 700px; white-space: nowrap; margin-bottom: 0;">Array Questions</p>             
+              <a href="./arithmatic.html" class="styled-button1" id="nextButton">Next</a>
+            </div>
+            </div>         
+          <div class="tab-content" id="java-content">
+            <div class="row">
+              <div class="col-md-10 col-md-offset-1">
+                <div class="row">
+                  <div class="col-xs-12 col-md-12">
+                    <div class="code-example">
+                      <div class="col-xs-6 col-md-12">
+                        <h3>Pyramid Program</h3>
+                        <pre class="code-block">
+                          <code class="java">
+                            public static void main(String[] args) {
+                              int rows = 5; // You can change the number of rows here
+                              
+                              for (int i = 1; i <= rows; i++) {
+                                  // Print spaces before the asterisks
+                                  for (int j = 1; j <= rows - i; j++) {
+                                      System.out.print(" ");
+                                  }
+                                  
+                                  // Print asterisks
+                                  for (int k = 1; k <= 2 * i - 1; k++) {
+                                      System.out.print("*");
+                                  }
+                                  
+                                  // Move to the next line for the next row
+                                  System.out.println();
+                              }
+                          }
+                          </code>
+                        </pre>
+                      </div>
+                      <div class="col-xs-6 col-md-4">
+                        <h3>O/P</h3>
+                        <pre class="code-block">
+                          <code class="java">
+                             *
+                            ***
+                           *****
+                          *******
+                         *********
+                          </code>
+                        </pre>
+                      </div>
+                    </div>
+                    <div class="code-example">
+                      <div class="col-xs-6 col-md-12">
+                        <h3>Right Triangle Program</h3>
+                        <pre class="code-block">
+                          <code class="java">
+                            public static void main(String[] args) {
+                              int rows = 7; // You can change the number of rows here
+                              
+                              for (int i = 1; i <= rows; i++) {
+                                  // Print asterisks
+                                  for (int j = 1; j <= i; j++) {
+                                      System.out.print("*");
+                                  }
+                                  
+                                  // Move to the next line for the next row
+                                  System.out.println();
+                              }
+                          }
+                          </code>
+                        </pre>
+                      </div>
+                      <div class="col-xs-6 col-md-4">
+                        <h3>O/P</h3>
+                        <pre class="code-block">
+                          <code class="java">
+                            *
+                            **
+                            ***
+                            ****
+                            *****
+                            ******
+                            *******
+                          </code>
+                        </pre>
+                      </div>
+                    </div>
+                    <div class="code-example">
+                      <div class="col-xs-6 col-md-12">
+                        <h3>Left Triangle Program</h3>
+                        <pre class="code-block">
+                          <code class="java">
+                            public static void main(String[] args) {
+                              int rows = 5; // You can change the number of rows here
+                    
+                              for (int i = 1; i <= rows; i++) {
+                                  // Print spaces before the asterisks
+                                  for (int j = 1; j <= rows - i; j++) {
+                                      System.out.print(" ");
+                                  }
+                    
+                                  // Print asterisks
+                                  for (int k = 1; k <= i; k++) {
+                                      System.out.print("*");
+                                  }
+                    
+                                  // Move to the next line for the next row
+                                  System.out.println();
+                              }
+                          }
+                          </code>
+                        </pre>
+                      </div>
+                      <div class="col-xs-6 col-md-4">
+                        <h3>O/P</h3>
+                        <pre class="code-block">
+                          <code class="java">
+                             *
+                            **
+                           ***
+                          ****
+                         *****
+                          </code>
+                        </pre>
+                      </div>
+                    </div>
+                    <div class="code-example">
+                      <div class="col-xs-6 col-md-12">
+                        <h3>Diamond Program</h3>
+                        <pre class="code-block">
+                          <code class="java">
+                            public static void main(String[] args) {
+                              int n = 5; // You can change the number of rows here
+                      
+                              // Upper half of the diamond
+                              for (int i = 1; i <= n; i++) {
+                                  // Print spaces before the asterisks
+                                  for (int j = 1; j <= n - i; j++) {
+                                      System.out.print(" ");
+                                  }
+                      
+                                  // Print asterisks
+                                  for (int k = 1; k <= 2 * i - 1; k++) {
+                                      System.out.print("*");
+                                  }
+                      
+                                  // Move to the next line for the next row
+                                  System.out.println();
+                              }
+                      
+                              // Lower half of the diamond
+                              for (int i = n - 1; i >= 1; i--) {
+                                  // Print spaces before the asterisks
+                                  for (int j = 1; j <= n - i; j++) {
+                                      System.out.print(" ");
+                                  }
+                      
+                                  // Print asterisks
+                                  for (int k = 1; k <= 2 * i - 1; k++) {
+                                      System.out.print("*");
+                                  }
+                      
+                                  // Move to the next line for the next row
+                                  System.out.println();
+                              }
+                          }
+                          </code>
+                        </pre>
+                      </div>
+                      <div class="col-xs-6 col-md-4">
+                        <h3>O/P</h3>
+                        <pre class="code-block">
+                          <code class="java">
+                             *
+                            ***
+                           *****
+                          *******
+                         *********
+                          *******
+                           *****
+                            ***
+                             *
+                          </code>
+                        </pre>
+                      </div>
+                    </div>
+                    <div class="code-example">
+                      <div class="col-xs-6 col-md-12">
+                        <h3>Down right triangle Program</h3>
+                        <pre class="code-block">
+                          <code class="java">
+                            public static void main(String[] args) {
+                              int n = 5; // You can change the number of rows here
+                      
+                              for (int i = n; i >= 1; i--) {
+                                  // Print asterisks
+                                  for (int j = 1; j <= i; j++) {
+                                      System.out.print("*");
+                                  }
+                      
+                                  // Move to the next line for the next row
+                                  System.out.println();
+                              }
+                          }
+                          </code>
+                        </pre>
+                      </div>
+                      <div class="col-xs-6 col-md-4">
+                        <h3>O/P</h3>
+                        <pre class="code-block">
+                          <code class="java">
+                            *****
+                            ****
+                            ***
+                            **
+                            *
+                          </code>
+                        </pre>
+                      </div>
+                    </div>
+                    <div class="code-example">
+                      <div class="col-xs-6 col-md-12">
+                        <h3>Right Justified Triangle Mirror Program</h3>
+                        <pre class="code-block">
+                          <code class="java">
+                            public static void main(String[] args) {
+                              int n = 5; // You can change the number of rows here
+                      
+                              // Right triangle (right-justified)
+                              for (int i = 1; i <= n - 1; i++) {
+                                  // Print spaces before the asterisks
+                                  for (int j = 1; j <= n - i; j++) {
+                                      System.out.print(" ");
+                                  }
+                      
+                                  // Print asterisks
+                                  for (int k = 1; k <= i; k++) {
+                                      System.out.print("*");
+                                  }
+                      
+                                  // Move to the next line for the next row
+                                  System.out.println();
+                              }
+                      
+                              // Common line for merging the triangles
+                              for (int i = 1; i <= n; i++) {
+                                  System.out.print("*");
+                              }
+                              System.out.println();
+                      
+                              // Down-right triangle
+                              for (int i = n - 1; i >= 1; i--) {
+                                  // Print spaces before the asterisks
+                                  for (int j = 1; j <= n - i; j++) {
+                                      System.out.print(" ");
+                                  }
+                      
+                                  // Print asterisks
+                                  for (int k = 1; k <= i; k++) {
+                                      System.out.print("*");
+                                  }
+                      
+                                  // Move to the next line for the next row
+                                  System.out.println();
+                              }
+                          }
+                          </code>
+                        </pre>
+                      </div>
+                      <div class="col-xs-6 col-md-4">
+                        <h3>O/P</h3>
+                        <pre class="code-block">
+                          <code class="java">
+                             *
+                            **
+                           ***
+                          ****
+                         *****
+                          ****
+                           ***
+                            **
+                             *
+                          </code>
+                        </pre>
+                      </div>
+                    </div>
+                    <div class="code-example">
+                      <div class="col-xs-6 col-md-12">
+                        <h3>Left justified Triangle Mirror Program</h3>
+                        <pre class="code-block">
+                          <code class="java">
+                            public static void main(String[] args) {
+                              int n = 5; // You can change the number of rows here
+                      
+                              // Left triangle (left-justified)
+                              for (int i = 1; i <= n; i++) {
+                                  // Print asterisks
+                                  for (int k = 1; k <= i; k++) {
+                                      System.out.print("*");
+                                  }
+                      
+                                  // Move to the next line for the next row
+                                  System.out.println();
+                              }
+                      
+                              // Down-left triangle (left-justified)
+                              for (int i = n - 1; i >= 1; i--) {
+                                  // Print asterisks
+                                  for (int k = 1; k <= i; k++) {
+                                      System.out.print("*");
+                                  }
+                      
+                                  // Move to the next line for the next row
+                                  System.out.println();
+                              }
+                          }
+                          </code>
+                        </pre>
+                      </div>
+                      <div class="col-xs-6 col-md-4">
+                        <h3>O/P</h3>
+                        <pre class="code-block">
+                          <code class="java">
+                            *
+                            **
+                            ***
+                            ****
+                            *****
+                            ****
+                            ***
+                            **
+                            *
+                          </code>
+                        </pre>
+                      </div>
+                    </div>
+                    <div class="code-example">
+                      <div class="col-xs-6 col-md-12">
+                        <h3>Star 1</h3>
+                        <pre class="code-block">
+                          <code class="java">
+                            public static void main(String[] args) {
+                              for (int i = 0; i <= 5; i++) {
+                                for(int j =1; j<=9; j++) {
+                                  System.out.print("*");
+                                }
+                                System.out.println();
+                                
+                              }
+                            }
+                          </code>
+                        </pre>
+                      </div>
+                      <div class="col-xs-6 col-md-4">
+                        <h3>O/P</h3>
+                        <pre class="code-block">
+                          <code class="java">
+                            *********
+                            *********
+                            *********
+                            *********
+                            *********
+                            *********
+                          </code>
+                        </pre>
+                      </div>
+                    </div>
+                    <div class="code-example">
+                      <div class="col-xs-6 col-md-12">
+                        <h3>Star 2</h3>
+                        <pre class="code-block">
+                          <code class="java">
+                            public static void main(String[] args) {
+                              for (int i = 1; i <= 9; i++) {
+                                for(int j =1; j<=9; j++) {
+                                  if(i == 1 || i == 9 || j == 1 || j == 9) {
+                                    System.out.print("*");
+                                  }
+                                  else {
+                                    System.out.print(" ");
+                                  }					
+                                }
+                                System.out.println();			
+                              }
+                            }
+                          </code>
+                        </pre>
+                      </div>
+                      <div class="col-xs-6 col-md-4">
+                        <h3>O/P</h3>
+                        <pre class="code-block">
+                          <code class="java">
+                            *********
+                            *       *
+                            *       *
+                            *       *
+                            *       *
+                            *       *
+                            *       *
+                            *       *
+                            *********
+                          </code>
+                        </pre>
+                      </div>
+                    </div>
+                    <div class="code-example">
+                      <div class="col-xs-6 col-md-12">
+                        <h3>Star 3</h3>
+                        <pre class="code-block">
+                          <code class="java">
+                            public static void main(String[] args) {
+                              for (int i = 1; i <= 5; i++) {
+                                for(int j =1; j<=5; j++) {
+                                  if(i == j || (i+j)==6) {
+                                    System.out.print("*");
+                                  }
+                                  else {
+                                    System.out.print(" ");
+                                  }
+                                }
+                                System.out.println();
+                                
+                              }
+                            }
+                          </code>
+                        </pre>
+                      </div>
+                      <div class="col-xs-6 col-md-4">
+                        <h3>O/P</h3>
+                        <pre class="code-block">
+                          <code class="java">
+                            *       *
+                              *   * 
+                                *  
+                              *   * 
+                            *       *
+                          </code>
+                        </pre>
+                      </div>
+                    </div>
+                    <div class="code-example">
+                      <div class="col-xs-6 col-md-12">
+                        <h3>Star 4</h3>
+                        <pre class="code-block">
+                          <code class="java">
+                            public static void main(String[] args) {
+                              for (int i = 1; i <= 5; i++) {
+                                for(int j =1; j<=9; j++) {
+                                  if(j%2 == 0) {
+                                    System.out.print("*");
+                                  }
+                                  else {
+                                    System.out.print("#");
+                                  }
+                                }
+                                System.out.println();
+                                
+                              }
+                            }
+                          </code>
+                        </pre>
+                      </div>
+                      <div class="col-xs-6 col-md-4">
+                        <h3>O/P</h3>
+                        <pre class="code-block">
+                          <code class="java">
+                            #*#*#*#*#
+                            #*#*#*#*#
+                            #*#*#*#*#
+                            #*#*#*#*#
+                            #*#*#*#*# 
+                          </code>
+                        </pre>
+                      </div>
+                    </div>
+                    <div class="code-example">
+                      <div class="col-xs-6 col-md-12">
+                        <h3>Number 1</h3>
+                        <pre class="code-block">
+                          <code class="java">
+                            public static void main(String[] args) {
+                              for (int i = 0; i <= 5; i++) {
+                                for(int j =1; j<=9; j++) {
+                                  System.out.print(j);
+                                }
+                                System.out.println();
+                                
+                              }
+                            }
+                          </code>
+                        </pre>
+                      </div>
+                      <div class="col-xs-6 col-md-4">
+                        <h3>O/P</h3>
+                        <pre class="code-block">
+                          <code class="java">
+                            123456789
+                            123456789
+                            123456789
+                            123456789
+                            123456789
+                            123456789 
+                          </code>
+                        </pre>
+                      </div>
+                    </div>
+                    <div class="code-example">
+                      <div class="col-xs-6 col-md-12">
+                        <h3>Sort String Using Array</h3>
+                        <pre class="code-block">
+                          <code class="java">
+                            import java.lang.*;
+                            import java.io.*;
+                            import java.util.*;
+                            import java.util.Arrays;
+
+                            public class Test {
+                                public static void main(String[] args) {
+                                    String input = "hello";
+                                    String sortedString = sortString(input);
+                                    System.out.println("Original string: " + input);
+                                    System.out.println("Sorted string: " + sortedString);
+                                }
+
+                                public static String sortString(String str) {                                    
+                                    char[] charArray = str.toCharArray();
+                                    Arrays.sort(charArray);
+                                    return new String(charArray);
+                                }
+                            }
+                          </code>
+                        </pre>
+                      </div>
+                      <div class="col-xs-6 col-md-4">
+                        <h3>O/P</h3>
+                        <pre class="code-block">
+                          <code class="java">
+                            Original string: hello
+                            Sorted string: ehllo
+                          </code>
+                        </pre>
+                      </div>
+                    </div>
+                    <div class="code-example">
+                      <div class="col-xs-6 col-md-12">
+                        <h3>Sort a String Alpabetically Using Array</h3>
+                        <pre class="code-block">
+                          <code class="java">
+                            import java.lang.*;
+                            import java.io.*;
+                            import java.util.*;
+                            import java.util.Arrays;
+
+                            public class Test {
+                                public static void main(String[] args) {
+                                    String sentence = "Example to Sort"; 
+                                    String[] words = sentence.split(" ");
+
+                                    for (int i = 0; i < words.length; i++) {
+                                        words[i] = words[i].toLowerCase();
+                                    }
+                                    
+                                    Arrays.sort(words);
+                                    
+                                    String sortedSentence = String.join(" ", words);
+                                    
+                                    System.out.println("Original: " + sentence);
+                                    System.out.println("Sorted: " + sortedSentence);
+                                }
+                            }
+                          </code>
+                        </pre>
+                      </div>
+                      <div class="col-xs-6 col-md-4">
+                        <h3>O/P</h3>
+                        <pre class="code-block">
+                          <code class="java">
+                            Original: Example to Sort
+                            Sorted: example sort to
+                          </code>
+                        </pre>
+                      </div>
+                    </div>
+                    <div class="code-example">
+                      <div class="col-xs-6 col-md-12">
+                        <h3>Swap number using third variable</h3>
+                        <pre class="code-block">
+                          <code class="java">
+                            public static void main(String[] args) {
+                              int a=10, b=20, temp;
+                              temp=a;
+                              a=b;
+                              b=temp;
+                              System.out.println(a);
+                              System.out.println(b);                              
+                            }
+                          </code>
+                        </pre>
+                      </div>
+                      <div class="col-xs-6 col-md-4">
+                        <h3>O/P</h3>
+                        <pre class="code-block">
+                          <code class="java">
+                            20
+                            10
+                          </code>
+                        </pre>
+                      </div>
+                    </div>
+                    <div class="code-example">
+                      <div class="col-xs-6 col-md-12">
+                        <h3>Swap String without third variable</h3>
+                        <pre class="code-block">
+                          <code class="java">
+                            public static void main(String[] args) {
+                              String s1="Good", s2="morning";
+                              s1=s1+s2;
+                              s2=s1.substring(0,s1.length()-s2.length());
+                              s1= s1.substring(s2.length());
+                              System.out.println(s1);
+                              System.out.println(s2);
+                            }
+                          </code>
+                        </pre>
+                      </div>
+                      <div class="col-xs-6 col-md-4">
+                        <h3>O/P</h3>
+                        <pre class="code-block">
+                          <code class="java">
+                            morning
+                            Good
+                          </code>
+                        </pre>
+                      </div>
+                    </div>
+                    <div class="code-example">
+                      <div class="col-xs-6 col-md-12">
+                        <h3>Swap String with third variable</h3>
+                        <pre class="code-block">
+                          <code class="java">
+                            public static void main(String[] args) {
+                              String s1="Good", s2="morning", temp;
+                              temp=s1;
+                              s1=s2;
+                              s2=temp;
+                              System.out.println(s1);
+                              System.out.println(s2);
+                            }
+                          </code>
+                        </pre>
+                      </div>
+                      <div class="col-xs-6 col-md-4">
+                        <h3>O/P</h3>
+                        <pre class="code-block">
+                          <code class="java">
+                            morning
+                            Good
+                          </code>
+                        </pre>
+                      </div>
+                    </div>                  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>                              
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer-container text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <p>© UNTITLED | Website created with <a href="http://www.mashup-template.com/" title="Create website with free html template">Mashup Template</a>/<a href="https://www.unsplash.com/" title="Beautiful Free Images">Unsplash</a></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function (event) {
+      initializeOriginalTexts();
+      navActivePage();
+    });
+
+    function initializeOriginalTexts() {
+      var tabContents = document.querySelectorAll(".tab-content");
+      tabContents.forEach(function(content) {
+        content.setAttribute("data-original-text", content.innerHTML);
+      });
+    }
+
+    function showTabContent(tab) {
+      var tabContents = document.getElementsByClassName("tab-content");
+      for (var i = 0; i < tabContents.length; i++) {
+        tabContents[i].style.display = "none";
+      }
+      document.getElementById(tab + "-content").style.display = "block";
+    }
+
+    function searchTabContent(tab) {
+      var searchTerm = document.querySelector(".search-input").value.toLowerCase();
+      var tabContent = document.getElementById(tab + "-content");
+      var originalText = tabContent.getAttribute('data-original-text');
+      var highlightedText = originalText.replace(new RegExp(searchTerm, 'gi'), function(match) {
+        return '<span class="highlight">' + match + '</span>';
+      });
+
+      tabContent.innerHTML = searchTerm === '' ? originalText : highlightedText;      
+    }
+
+    function searchAndScroll() {
+  var searchTerm = document.querySelector("#searchInput").value;
+  if (searchTerm === "") return;
+
+  var tabContents = document.querySelectorAll(".tab-content");
+  var found = false;
+
+  tabContents.forEach(function(content) {
+    var text = content.getAttribute('data-original-text');
+    if (text.toLowerCase().includes(searchTerm.toLowerCase())) {
+      content.innerHTML = text.replace(new RegExp(searchTerm, 'gi'), function(match) {
+        return '<span class="highlight">' + match + '</span>';
+      });
+      content.style.display = "block";
+
+      var highlightedElement = content.querySelector(".highlight");
+      if (highlightedElement) {
+        highlightedElement.scrollIntoView({ behavior: "smooth", block: "center" });
+        found = true;
+      }
+    } else {
+      content.innerHTML = text;
+      // content.style.display = "none";
+    }
+  });
+
+  if (!found) {
+    alert("Search term not found in the code examples.");
+  }
+}
+    showTabContent('java');
+  </script>
+
+  <script type="text/javascript" src="./static/main.70a66962.js"></script>
+</body>
+
+</html>

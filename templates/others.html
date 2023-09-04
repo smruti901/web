@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width,initial-scale=1" name="viewport">
+  <meta content="description" name="description">
+  <meta name="google" content="notranslate" />
+  <meta content="Mashup templates have been developped by Orson.io team" name="author">
+
+  <!-- Disable tap highlight on IE  -->
+  <meta name="msapplication-tap-highlight" content="no">
+  
+  <link rel="apple-touch-icon" sizes="180x180" href="./static/assets/apple-icon-180x180.png">
+  <link href="./static/assets/favicon.ico" rel="icon">
+
+  <style>
+    .tab-links {
+      display: flex;
+      margin-bottom: 20px;
+    }
+
+    .tab-link {
+      cursor: pointer;
+      font-size: 16px;
+      margin-right: 20px;
+    }
+
+    .tab-content {
+      display: none;
+      padding: 20px;
+      border: 1px solid #ccc;
+      background-color: #fff;
+    }
+    .search-bar {
+      display: flex;
+      align-items: center;
+      margin-top: 10px;
+      margin-left: 0px;
+    }
+    .search-input {
+      padding: 5px;
+      width: 200px;
+      border: 5px solid #ccc;
+      border-radius: 20px;
+    }
+     .highlight {
+      background-color: yellow;
+    }
+    .styled-button {
+      display: inline-block;
+      padding: 5px;
+      background-color: #3498db;
+      color: #ffffff;
+      border: none;
+      border-radius: 20px;
+      text-align: center;
+      text-decoration: none;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
+    }
+    
+    .styled-button:hover {
+      background-color: #2980b9;
+    }
+    .code-block {
+      background-color: #000000;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      overflow: auto;
+      flex: 1;
+      margin-right: 10px;
+    }
+    .code-block1 {
+      background-color: #000000;
+      padding: 90px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      overflow: auto;
+      flex: 1;
+      margin-right: 10px;
+    }
+    .code-example {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 20px;
+    }
+
+    .code-block code {
+      display: block;
+      padding: 0;
+      margin: 0;
+      font-family: "Courier New", monospace;
+      font-size: 14px;
+      color: #fff;
+      font-weight: bold;
+      font-size: 14px;
+      text-align: left;
+      white-space: pre-line;
+    }
+    .code-block1 code {
+      display: block;
+      padding: 0;
+      margin: 0;
+      font-family: "Courier New", monospace;
+      font-size: 14px;
+      color: #fff;
+      font-weight: bold;
+      font-size: 14px;
+      text-align: left;
+      white-space: pre-line;
+    }
+        .styled-button1 {
+          display: inline-block;
+      padding: 5px;
+      background-color: #3498db;
+      color: #ffffff;
+      border: none;
+      border-radius: 20px;
+      text-align: center;
+      text-decoration: none;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
+      margin-left: 30px;
+      vertical-align: middle;
+
+    }
+    .simple-text-section {
+    display: inline-block;
+    vertical-align: right;
+    margin-right: 20px;
+    font-size: 16px;
+  }
+  </style>
+  <title>Title page</title>  
+
+  <link href="./static/main.3f6952e4.css" rel="stylesheet">
+</head>
+
+<body class="">
+  <div id="site-border-left"></div>
+  <div id="site-border-right"></div>
+  <div id="site-border-top"></div>
+  <div id="site-border-bottom"></div>
+  
+  <header>
+    <nav class="navbar  navbar-fixed-top navbar-default">
+      <div class="container">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbar-collapse">
+          <ul class="nav navbar-nav ">
+            <li><a href="./work.html" title="">Home</a></li>          
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <div class="section-container">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="section-container-spacer text-center">
+            <h1 class="h2">Arrays</h1>
+          </div>
+                             
+            <div class="search-bar">
+              <input class="search-input" type="text" placeholder="Type your Question" id="searchInput">
+              <button class="styled-button" onclick="searchAndScroll()">Search</button>
+              <div style="display: flex; align-items: center; justify-content: space-between;">
+              <p style="margin-left: 700px; white-space: nowrap; margin-bottom: 0;">Array Questions</p>             
+              <a href="./arithmatic.html" class="styled-button1" id="nextButton">Next</a>
+            </div>
+            </div>         
+          <div class="tab-content" id="java-content">
+            <div class="row">
+              <div class="col-md-10 col-md-offset-1">
+                <div class="row">
+                  <div class="col-xs-12 col-md-12">
+                    <div class="code-example">
+                      <div class="col-xs-6 col-md-12">
+                        <h3>Make first character of each word capital</h3>
+                        <pre class="code-block">
+                          <code class="java">
+                            import java.util.*;
+                            public static void main(String[] args) {		
+                              String s ="my name is java";
+                              String words[] = s.split(" ");
+                              String capitalizeword = "";
+                              for (String word : words) {
+                                String first = word.substring(0,1);
+                                String afterfirst = word.substring(1);
+                                capitalizeword += first.toUpperCase()+afterfirst+" ";
+                              }
+                              System.out.println(capitalizeword);
+                            }
+                          </code>
+                        </pre>
+                      </div>
+                      <div class="col-xs-6 col-md-4">
+                        <h3>O/P</h3>
+                        <pre class="code-block">
+                          <code class="java">
+                            My Name Is Java 
+                          </code>
+                        </pre>
+                      </div>
+                    </div>
+                    <div class="code-example">
+                      <div class="col-xs-6 col-md-12">
+                        <h3>Make second character of each word capital</h3>
+                        <pre class="code-block">
+                          <code class="java">
+                            import java.util.*;
+                            public static void main(String[] args) {		
+                              String s ="my name is java";
+                              String words[] = s.split(" ");
+                              String capitalizeword = "";
+                              for (String word : words) {
+                                String afterfirst = word.substring(1,2);
+                                String first = word.substring(0,1);
+                                capitalizeword += first+afterfirst.toUpperCase()+
+                                word.substring(2).toLowerCase()+" ";
+                              }
+                              System.out.println(capitalizeword);
+                            }
+                          </code>
+                        </pre>
+                      </div>
+                      <div class="col-xs-6 col-md-4">
+                        <h3>O/P</h3>
+                        <pre class="code-block">
+                          <code class="java">
+                            mY nAme iS jAva 
+                          </code>
+                        </pre>
+                      </div>
+                    </div>
+                    <div class="code-example">
+                      <div class="col-xs-6 col-md-12">
+                        <h3>Make last character of each word capital</h3>
+                        <pre class="code-block">
+                          <code class="java">
+                            import java.util.*;
+                            public static void main(String[] args) {		
+                              String s ="my name is java";
+                              String words[] = s.split(" ");
+                              String capitalizeword = "";
+                              for (String word : words) {
+                                String last = word.substring(word.length()-1);
+                                String beforefirst = word.substring(0,word.length()-1);
+                                capitalizeword += beforefirst+last.toUpperCase()+" ";
+                              }
+                              System.out.println(capitalizeword);
+                            }
+                          </code>
+                        </pre>
+                      </div>
+                      <div class="col-xs-6 col-md-4">
+                        <h3>O/P</h3>
+                        <pre class="code-block">
+                          <code class="java">
+                            mY namE iS javA 
+                          </code>
+                        </pre>
+                      </div>
+                    </div>
+                    <div class="code-example">
+                      <div class="col-xs-6 col-md-12">
+                        <h3>Make first and last character of each word capital</h3>
+                        <pre class="code-block">
+                          <code class="java">
+                            import java.util.*;
+                            public static void main(String[] args) {				
+                              String s ="my name is java";
+                              String words[] = s.split(" ");
+                              String capitalizeword = "";
+                              for (String word : words) {
+                                String last = word.substring(word.length()-1);
+                                String beforefirst = word.substring(1,word.length()-1);
+                                capitalizeword += word.substring(0,1).toUpperCase()+
+                                beforefirst+last.toUpperCase()+" ";
+                              }
+                              System.out.println(capitalizeword);
+                            }
+                          </code>
+                        </pre>
+                      </div>
+                      <div class="col-xs-6 col-md-4">
+                        <h3>O/P</h3>
+                        <pre class="code-block">
+                          <code class="java">
+                            MY NamE IS JavA 
+                          </code>
+                        </pre>
+                      </div>
+                    </div>
+                    <div class="code-example">
+                      <div class="col-xs-6 col-md-12">
+                        <h3>Remove Duplicates without Treeset</h3>
+                        <pre class="code-block">
+                          <code class="java">
+                            import java.util.*;
+                            public static void main(String[] args) {
+                              String s = "11223344556677";
+                              String result = "";
+                              for(int i = 0; i<s.length(); i++) {
+                                if(result.indexOf(s.charAt(i)) == -1) {
+                                  result = result + s.charAt(i);
+                                }
+                                
+                              }
+                              System.out.println(result);
+                            }
+                          </code>
+                        </pre>
+                      </div>
+                      <div class="col-xs-6 col-md-4">
+                        <h3>O/P</h3>
+                        <pre class="code-block">
+                          <code class="java">
+                            1234567
+                          </code>
+                        </pre>
+                      </div>
+                    </div>
+                    <div class="code-example">
+                      <div class="col-xs-6 col-md-12">
+                        <h3>Remove Duplicate in String  Using Set</h3>
+                        <pre class="code-block">
+                          <code class="java">
+                            import java.util.*;
+                            public static void main(String[] args) {
+                              String s = "my name is java my name is java";
+                              TreeSet<String> set = new TreeSet<String>();
+                              String [] s1 =s.split(" ");
+                              for(String w:s1) {
+                                set.add(w);
+                              }
+                              System.out.println(set);
+                            }
+                          </code>
+                        </pre>
+                      </div>
+                      <div class="col-xs-6 col-md-4">
+                        <h3>O/P</h3>
+                        <pre class="code-block">
+                          <code class="java">
+                            [is, java, my, name]
+                          </code>
+                        </pre>
+                      </div>
+                    </div>
+                    <div class="code-example">
+                      <div class="col-xs-6 col-md-12">
+                        <h3>Remove duplicate characters Using Set</h3>
+                        <pre class="code-block">
+                          <code class="java">
+                            import java.util.*;
+                            public static void main(String[] args) {
+                              String s = "my name is java my name is java";
+                              TreeSet<Character> set = new TreeSet<Character>();
+                              for(int i= 0; i<s.length(); i++) {
+                                set.add(s.charAt(i));
+                              }
+                              System.out.println(set);
+                            }
+                          </code>
+                        </pre>
+                      </div>
+                      <div class="col-xs-6 col-md-4">
+                        <h3>O/P</h3>
+                        <pre class="code-block">
+                          <code class="java">
+                            [ , a, e, i, j, m, n, s, v, y]
+                          </code>
+                        </pre>
+                      </div>
+                    </div>
+                    <div class="code-example">
+                      <div class="col-xs-6 col-md-12">
+                        <h3>Remove Special Characters from String</h3>
+                        <pre class="code-block">
+                          <code class="java">
+                            import java.util.*;
+                            public static void main(String[] args) {
+                              String s= "Ele#$pha&*^%nt";
+                              String s1 = s.replaceAll("[^a-zA-Z0-9]","");
+                              System.out.println(s1);
+                            }
+                          </code>
+                        </pre>
+                      </div>
+                      <div class="col-xs-6 col-md-4">
+                        <h3>O/P</h3>
+                        <pre class="code-block">
+                          <code class="java">
+                            Elephant
+                          </code>
+                        </pre>
+                      </div>
+                    </div>
+                    <div class="code-example">
+                      <div class="col-xs-6 col-md-12">
+                        <h3>Count vowels</h3>
+                        <pre class="code-block">
+                          <code class="java">
+                            import java.util.*;
+                            public static void main(String[] args) {
+                              String str = "Hello, World!";
+                               int count=0;
+                               for (int i = 0; i < str.length(); i++) {
+                                 if(str.charAt(i)=='a' || str.charAt(i)=='e' || str.charAt(i)=='i' 
+                                 || str.charAt(i)=='o' || str.charAt(i)=='u') {
+                                   count++;
+                                 }
+                                 
+                               }
+                               System.out.println(count);
+                             }
+                          </code>
+                        </pre>
+                      </div>
+                      <div class="col-xs-6 col-md-4">
+                        <h3>O/P</h3>
+                        <pre class="code-block">
+                          <code class="java">
+                            3
+                          </code>
+                        </pre>
+                      </div>
+                    </div>
+                    <div class="code-example">
+                      <div class="col-xs-6 col-md-12">
+                        <h3>Count consonents</h3>
+                        <pre class="code-block">
+                          <code class="java">
+                            import java.util.*;
+                            public static void main(String[] args) {
+                              int count = 0;
+                              String str = "aa bb cc dd ee ff ggg BBB";
+                              
+                              for (int i = 0; i < str.length(); i++) {
+                                  char currentChar = Character.toLowerCase(str.charAt(i));
+                                  if (currentChar != ' ' && currentChar >= 'a' && currentChar <= 'z' &&
+                                      currentChar != 'a' && currentChar != 'e' && currentChar != 'i' && 
+                                      currentChar != 'o' && currentChar != 'u') {
+                                      count++;
+                                  }
+                              }
+                              
+                              System.out.print("Number of consonants: " + count);
+                          }
+                          </code>
+                        </pre>
+                      </div>
+                      <div class="col-xs-6 col-md-4">
+                        <h3>O/P</h3>
+                        <pre class="code-block">
+                          <code class="java">
+                            Number of consonants: 14
+                          </code>
+                        </pre>
+                      </div>
+                    </div>
+                    <div class="code-example">
+                      <div class="col-xs-6 col-md-12">
+                        <h3>Count vowels using Map</h3>
+                        <pre class="code-block">
+                          <code class="java">
+                            import java.util.*;
+                            public static void main(String[] args) {
+                              String str = "Hello, World!";
+                              Map<String, Integer> map = new HashMap<>();
+                              map.put("a", 0);
+                              map.put("e", 0);
+                              map.put("i", 0);
+                              map.put("o", 0);
+                              map.put("u", 0);
+                              for (int i = 0; i < str.length(); i++) {
+                                char ch = str.charAt(i);
+                                if(ch == 'a' || ch == 'A') {
+                                  map.put("a", map.get("a")+1);
+                                }
+                                else if(ch == 'e' || ch == 'E') {
+                                  map.put("e", map.get("e")+1);
+                                }
+                                else if(ch == 'i' || ch == 'I') {
+                                  map.put("i", map.get("1")+1);
+                                }
+                                else if(ch == 'o' || ch == 'O') {
+                                  map.put("o", map.get("o")+1);
+                                }
+                                else if(ch == 'u' || ch == 'U') {
+                                  map.put("u", map.get("u")+1);
+                                }
+                              }
+                              System.out.println("count of 'a' ="+ map.get("a"));
+                              System.out.println("count of 'e' ="+ map.get("e"));
+                              System.out.println("count of 'i' ="+ map.get("i"));
+                              System.out.println("count of 'o' ="+ map.get("o"));
+                              System.out.println("count of 'u' ="+ map.get("u"));
+                              
+                            }
+                          </code>
+                        </pre>
+                      </div>
+                      <div class="col-xs-6 col-md-4">
+                        <h3>O/P</h3>
+                        <pre class="code-block">
+                          <code class="java">
+                            count of 'a' =0
+                            count of 'e' =1
+                            count of 'i' =0
+                            count of 'o' =2
+                            count of 'u' =0 
+                          </code>
+                        </pre>
+                      </div>
+                    </div>
+                    <div class="code-example">
+                      <div class="col-xs-6 col-md-12">
+                        <h3>Fibonacci Series</h3>
+                        <pre class="code-block">
+                          <code class="java">
+                            import java.util.*;
+                            public static void main(String[] args) {
+                              int prev=0;
+                              int next=1;
+                              int range=5;
+                              System.out.print(prev+" ");
+                              System.out.print(next+" ");
+                              for (int i = 1; i <= range; i++) {
+                                int sum=prev+next;
+                                System.out.print(sum+" ");
+                                prev=next;
+                                next=sum;
+                          
+                              }
+                            }
+                          </code>
+                        </pre>
+                      </div>
+                      <div class="col-xs-6 col-md-4">
+                        <h3>O/P</h3>
+                        <pre class="code-block">
+                          <code class="java">
+                            0 1 1 2 3 5 8  
+                          </code>
+                        </pre>
+                      </div>
+                    </div>
+                    <div class="code-example">
+                      <div class="col-xs-6 col-md-12">
+                        <h3>Anagram</h3>
+                        <pre class="code-block">
+                          <code class="java">
+                            import java.util.*;
+                            public static void main(String[] args) {
+                              String str1="race";
+                              String str2="care";
+                                
+                          
+                                 if(str1.length() == str2.length()) {
+                                
+                                  char[] charArray1 = str1.toCharArray();
+                                  char[] charArray2 = str2.toCharArray();
+                            
+                                  Arrays.sort(charArray1);
+                                  Arrays.sort(charArray2);
+                                
+                                  boolean result = Arrays.equals(charArray1, charArray2);
+                          
+                                  if(result) {
+                                    System.out.println(str1 + " and " + str2 + " are anagram.");
+                                  }
+                                  else {
+                                    System.out.println(str1 + " and " + str2 + " are not anagram.");
+                                  }
+                                }
+                            }
+                          </code>
+                        </pre>
+                      </div>
+                      <div class="col-xs-6 col-md-4">
+                        <h3>O/P</h3>
+                        <pre class="code-block">
+                          <code class="java">
+                            race and care are anagram.
+                          </code>
+                        </pre>
+                      </div>
+                    </div>
+                    <div class="code-example">
+                      <div class="col-xs-6 col-md-12">
+                        <h3>Panagram</h3>
+                        <pre class="code-block">
+                          <code class="java">
+                            import java.util.*;
+                            public static void main(String[] args) {
+                              String str = "a quick brown fox jumps over the lazy dog";                   
+                                   boolean flag = false;                       
+                                   for (char ch = 'a'; ch <= 'z'; ch++) {                                       
+                                       if (str.contains(String.valueOf(ch))) {
+                                           flag = true;
+                                           break;
+                                       }
+                                   }                            
+                                   if (flag)
+                                       System.out.println("Panagram");
+                                   else
+                                       System.out.println("Not Panagram");
+                           }
+                          </code>
+                        </pre>
+                      </div>
+                      <div class="col-xs-6 col-md-4">
+                        <h3>O/P</h3>
+                        <pre class="code-block">
+                          <code class="java">
+                            Panagram
+                          </code>
+                        </pre>
+                      </div>
+                    </div>
+                    <div class="code-example">
+                      <div class="col-xs-6 col-md-12">
+                        <h3>Remove duplicates in Array using Map</h3>
+                        <pre class="code-block">
+                          <code class="java">
+                            import java.util.*;
+                            public static void main(String[] args) {
+                              int[] arr = { 1, 2, 5, 1, 7, 2, 4, 2 };                                  
+                                   int n = arr.length;
+                                   HashMap<Integer, Boolean> mp = new HashMap<>();                                 
+                                   for (int i = 0; i < n; ++i) {
+                                        if (mp.get(arr[i]) == null)
+                                       {
+                                           System.out.print(arr[i] + " ");
+                                           mp.put(arr[i], true);
+                                       }
+                                   }
+                           }
+                          </code>
+                        </pre>
+                      </div>
+                      <div class="col-xs-6 col-md-4">
+                        <h3>O/P</h3>
+                        <pre class="code-block">
+                          <code class="java">
+                            1 2 5 7 4 
+                          </code>
+                        </pre>
+                      </div>
+                    </div>
+                    <div class="code-example">
+                      <div class="col-xs-6 col-md-12">
+                        <h3>Occurence of Character Using Set</h3>
+                        <pre class="code-block">
+                          <code class="java">
+                            import java.util.*;
+                            public static void main(String[] args) {
+                              String s="mohapatra";
+                              char arr[]=s.toCharArray();
+                              Map<Character,Integer> m= new HashMap<Character,Integer>();
+                              for (int i = 0; i < arr.length; i++) {
+                                if(m.containsKey(arr[i])) {
+                                  m.put(arr[i], m.get(arr[i])+1);
+                                }
+                                else {
+                                  m.put(arr[i], 1);
+                                }
+                                
+                              }
+                              System.out.println(m);
+                              HashSet<Character>set=new HashSet<Character>();
+                              for (int i = 0; i < s.length(); i++) {
+                                set.add(s.charAt(i));
+                              }
+                              System.out.println(set);
+                            }
+                          </code>
+                        </pre>
+                      </div>
+                      <div class="col-xs-6 col-md-4">
+                        <h3>O/P</h3>
+                        <pre class="code-block">
+                          <code class="java">
+                            {p=1, a=3, r=1, t=1, h=1, m=1, o=1}
+                            [p, a, r, t, h, m, o]
+                          </code>
+                        </pre>
+                      </div>
+                    </div>                    
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>                              
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer-container text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <p>© UNTITLED | Website created with <a href="http://www.mashup-template.com/" title="Create website with free html template">Mashup Template</a>/<a href="https://www.unsplash.com/" title="Beautiful Free Images">Unsplash</a></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function (event) {
+      initializeOriginalTexts();
+      navActivePage();
+    });
+
+    function initializeOriginalTexts() {
+      var tabContents = document.querySelectorAll(".tab-content");
+      tabContents.forEach(function(content) {
+        content.setAttribute("data-original-text", content.innerHTML);
+      });
+    }
+
+    function showTabContent(tab) {
+      var tabContents = document.getElementsByClassName("tab-content");
+      for (var i = 0; i < tabContents.length; i++) {
+        tabContents[i].style.display = "none";
+      }
+      document.getElementById(tab + "-content").style.display = "block";
+    }
+
+    function searchTabContent(tab) {
+      var searchTerm = document.querySelector(".search-input").value.toLowerCase();
+      var tabContent = document.getElementById(tab + "-content");
+      var originalText = tabContent.getAttribute('data-original-text');
+      var highlightedText = originalText.replace(new RegExp(searchTerm, 'gi'), function(match) {
+        return '<span class="highlight">' + match + '</span>';
+      });
+
+      tabContent.innerHTML = searchTerm === '' ? originalText : highlightedText;      
+    }
+
+    function searchAndScroll() {
+  var searchTerm = document.querySelector("#searchInput").value;
+  if (searchTerm === "") return;
+
+  var tabContents = document.querySelectorAll(".tab-content");
+  var found = false;
+
+  tabContents.forEach(function(content) {
+    var text = content.getAttribute('data-original-text');
+    if (text.toLowerCase().includes(searchTerm.toLowerCase())) {
+      content.innerHTML = text.replace(new RegExp(searchTerm, 'gi'), function(match) {
+        return '<span class="highlight">' + match + '</span>';
+      });
+      content.style.display = "block";
+
+      var highlightedElement = content.querySelector(".highlight");
+      if (highlightedElement) {
+        highlightedElement.scrollIntoView({ behavior: "smooth", block: "center" });
+        found = true;
+      }
+    } else {
+      content.innerHTML = text;
+      // content.style.display = "none";
+    }
+  });
+
+  if (!found) {
+    alert("Search term not found in the code examples.");
+  }
+}
+    showTabContent('java');
+  </script>
+
+  <script type="text/javascript" src="./static/main.70a66962.js"></script>
+</body>
+
+</html>

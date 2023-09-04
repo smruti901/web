@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width,initial-scale=1" name="viewport">
+  <meta content="description" name="description">
+  <meta name="google" content="notranslate" />
+  <meta content="Mashup templates have been developped by Orson.io team" name="author">
+
+  <!-- Disable tap highlight on IE -->
+  <meta name="msapplication-tap-highlight" content="no">
+  
+  <link rel="apple-touch-icon" sizes="180x180" href="./static/assets/apple-icon-180x180.png">
+  <link href="./static/pikachu.ico" rel="icon">
+
+  <style>
+     .button-container {
+      margin-top: 20px; /* Adjust this value to move the button down */
+      margin-left: 50px; /* Adjust this value to move the button to the right */
+    }
+    .expandable-section {
+      margin-top: 20px;
+    }
+
+    .expandable-header {
+      cursor: pointer;
+      font-weight: bold;
+      padding: 10px;
+      font-size: 30px;
+      /* color: magenta; */
+      /* background-color: #f1f1f1; */
+      /* Remove the box-shadow property */
+    }
+    
+    
+    .external-links {
+        display: inline-block;
+        vertical-align: top; /* Align with the top of the expandable sections */
+        margin-top: 20px;
+        margin-left: 0px; /* Adjust the spacing as needed */
+
+    }
+
+    .external-link {
+      /* Change the color as needed */
+        color: black; 
+        /* text-decoration: underline; */
+        display: block;
+        font-weight: bold;
+        padding: 10px;
+        font-size: 30px;
+    }
+
+    .expandable-content {
+      display: none;
+      padding: 30px;
+      font-size: 30px;
+    }
+
+    .contents-link {
+      position: absolute;
+      top: 20px;
+      right: 50px;
+      font-size: 20px;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+    
+    .expandable-content ul {
+      list-style-type: circle;
+      padding-left: 50px;
+    }
+  </style>
+  <title>Title page</title>  
+
+<link href="./static/main.3f6952e4.css" rel="stylesheet"></head>
+
+<body class="">
+<div id="site-border-left"></div>
+<div id="site-border-right"></div>
+<div id="site-border-top"></div>
+<div id="site-border-bottom"></div>
+<!-- Add your content of header -->
+<header>
+  <nav class="navbar  navbar-fixed-top navbar-default">
+    <div class="container">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+      <!-- <div class="collapse navbar-collapse" id="navbar-collapse">
+        <ul class="nav navbar-nav ">
+          <li><a title="">Home</a></li>
+          <li><a href="./works.html" title="">Simple Java Programs</a></li>
+          <li><a href="./about.html" title="">Interview Questions</a></li>
+        </ul>
+      </div>  -->
+    </div>
+  </nav>
+</header>
+<div class="section-container">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        
+      </div>
+
+      <div class="contents-wrapper" style="text-align: left; padding-top: 30px;">
+        <a style="margin-left: 500px; font-size: 50px; text-decoration: underline;">Contents</a>
+      </div>
+      <div class="expandable-section">
+        <span class="expandable-header" onclick="toggleExpandableContent('expandableContent')">
+          Theory <span style="font-size: 20px; margin-left: 5px; color: blue;">▼</span>
+        </span>
+        <div class="expandable-content" id="expandableContent">
+          <ul>
+            <!-- <li><a href="./introduction.html">Introduction</a></li> -->
+            <li style="margin-top: 30px;"><a href="./oops.html">OOPS Concept</a></li>
+            <li style="margin-top: 30px;"><a href="./collections.html">Collections</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="expandable-section">
+        <span class="expandable-header" onclick="toggleExpandableContent('expandableContent2')">
+          Simple Java Programs <span style="font-size: 20px; margin-left: 5px; color: blue;">▼</span>
+        </span>
+        <div class="expandable-content" id="expandableContent2">
+          <ul>
+            <li>
+              <span class="expandable-header" onclick="toggleExpandableContent('basicProgramsContent')">
+                Basic Programs <span style="font-size: 20px; margin-left: 5px; color: blue;">▼</span>
+              </span>
+              <ul class="expandable-content" id="basicProgramsContent" style="display: none;">
+                <li ><a href="./reverse and swapping.html">Reverse and Swapping Programs</a></li>
+                <li style="margin-top: 30px;"><a href="#">Arrays</a></li>
+                <li style="margin-top: 30px;"><a href="#">Loops</a></li>
+              </ul>
+            </li>
+            <li style="margin-top: 30px;"><a href="./star.html">Star</a></li>
+            <li style="margin-top: 30px;"><a href="./others.html">Others</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="external-links">
+        <a href="./works.html" class="external-link">Interview Questions</a>
+        <!-- <a href="./works.html" class="external-link">Theory4</a> -->
+    </div>
+    </div>
+  </div>
+</div>
+<script>
+  // Initialize the visibility state of expandable contents
+  var expandableContentVisible = {
+    'expandableContent': false,
+    'expandableContent2': false
+  };
+
+  function toggleExpandableContent(contentId) {
+    var content = document.getElementById(contentId);
+    var otherContentId = contentId === 'expandableContent' ? 'expandableContent2' : 'expandableContent';
+    var otherContent = document.getElementById(otherContentId);
+
+    if (!expandableContentVisible[contentId]) {
+      content.style.display = 'block';
+      otherContent.style.display = 'none';
+      expandableContentVisible[contentId] = true;
+      expandableContentVisible[otherContentId] = false;
+    } else {
+      content.style.display = 'none';
+      expandableContentVisible[contentId] = false;
+    }
+  }
+</script>
+
+<footer class="footer-container text-center">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <p>© UNTITLED | Website created with <a href="http://www.mashup-template.com/" title="Create website with free html template">Mashup Template</a>/<a href="https://www.unsplash.com/" title="Beautiful Free Images">Unsplash</a></p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function (event) {
+     navActivePage();
+  });
+</script>
+  <script type="text/javascript" src="./static/main.70a66962.js"></script></body>
+  
+</html>

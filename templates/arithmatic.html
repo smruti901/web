@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width,initial-scale=1" name="viewport">
+  <meta content="description" name="description">
+  <meta name="google" content="notranslate" />
+  <meta content="Mashup templates have been developped by Orson.io team" name="author">
+
+  <!-- Disable tap highlight on IE  -->
+  <meta name="msapplication-tap-highlight" content="no">
+  
+  <link rel="apple-touch-icon" sizes="180x180" href="./static/assets/apple-icon-180x180.png">
+  <link href="./static/assets/favicon.ico" rel="icon">
+
+  <style>
+    .tab-links {
+      display: flex;
+      margin-bottom: 20px;
+    }
+
+    .tab-link {
+      cursor: pointer;
+      font-size: 16px;
+      margin-right: 20px;
+    }
+
+    .tab-content {
+      display: none;
+      padding: 20px;
+      border: 1px solid #ccc;
+      background-color: #fff;
+    }
+    .search-bar {
+      display: flex;
+      align-items: center;
+      margin-top: 10px;
+      margin-left: 700px;
+    }
+    .search-input {
+      padding: 5px;
+      width: 200px;
+      border: 5px solid #ccc;
+      border-radius: 20px;
+    }
+     .highlight {
+      background-color: yellow;
+    }
+    .styled-button {
+      display: inline-block;
+      padding: 5px;
+      background-color: #3498db; /* Change to your desired background color */
+      color: #ffffff; /* Change to your desired text color */
+      border: none;
+      border-radius: 20px;
+      text-align: center;
+      text-decoration: none;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
+    }
+    
+    .styled-button:hover {
+      background-color: #2980b9; /* Change to a darker shade for hover effect */
+    }
+  </style>
+  <title>Title page</title>  
+
+  <link href="./static/main.3f6952e4.css" rel="stylesheet">
+</head>
+
+<body class="">
+  <div id="site-border-left"></div>
+  <div id="site-border-right"></div>
+  <div id="site-border-top"></div>
+  <div id="site-border-bottom"></div>
+  
+  <header>
+    <nav class="navbar  navbar-fixed-top navbar-default">
+      <div class="container">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbar-collapse">
+          <ul class="nav navbar-nav ">
+            <li><a href="./work.html" title="">Home</a></li>          
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <div class="section-container">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="section-container-spacer text-center">
+            <h1 class="h2">03 : About me</h1>
+          </div>
+          <div class="tab-links">
+            <div class="tab-link" onclick="showTabContent('java')">Java</div> 
+            <div class="tab-link" onclick="showTabContent('python')">Python</div>
+            <div class="tab-link" onclick="showTabContent('csharp')">C#</div>                     
+            <div class="search-bar">
+              <input class="search-input" type="text" placeholder="Type your Question" id="searchInput">
+              <button class="styled-button" onclick="searchAndScroll()">Search</button>
+            </div>
+          </div>
+          <div class="tab-content" id="java-content">
+            <div class="row">
+              <div class="col-md-10 col-md-offset-1">
+                <div class="row">
+                  <div class="col-xs-12 col-md-6">
+                    <h3>Reverse a String </h3>
+                    <p>	public void reverse() {
+                      String s = "india";
+                      String reverse = "";
+                      for (int i = s.length() - 1; i >= 0; i--) {
+                        reverse = reverse + s.charAt(i);
+                      }
+                      System.out.println(reverse);
+                    }</p>
+                  </div>
+                  <div class="col-xs-12 col-md-4">
+                    <h3>Consectetur adipiscing elit</h3>
+                    <img style="margin-top: 30px;" src="./static/assets/images/profil.jpg" class="img-responsive" alt="">
+                  </div>
+                  <div class="col-xs-12 col-md-6">
+                    <h3>Consectetur adipiscing elit</h3>
+                    <p>Lorem ipsum I love java dolor sit amet, consectetur adipiscing elit. Maecenas luctus at sem quis varius. 
+                    Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Cras ultrices hendrerit nisl.</p>
+                  </div>
+                  <div class="col-xs-12 col-md-4">
+                    <img style="margin-top: 30px;" src="./static/assets/images/profil.jpg" class="img-responsive" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-content" id="python-content">
+            <div class="row">
+              <div class="col-md-10 col-md-offset-1">
+                <div class="row">
+                  <div class="col-xs-12 col-md-6">
+                    <h3>Consectetur adipiscing elit</h3>
+                    <p class="tab-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas luctus at sem quis varius. 
+                    Class apple mango aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Cras ultrices hendrerit nisl.</p>
+                  </div>
+                  <div class="col-xs-12 col-md-4">
+                    <h3>Consectetur adipiscing elit</h3>
+                    <img style="margin-top: 30px;" src="./static/assets/images/profil.jpg" class="img-responsive" alt="">
+                  </div>                  
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-content" id="csharp-content">
+            <div class="row">
+              <div class="col-md-10 col-md-offset-1">
+                <div class="row">
+                  <div class="col-xs-12 col-md-6">
+                    <h3>Consectetur adipiscing elit</h3>
+                    <p class="tab-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas luctus at sem quis varius. 
+                    Class elephant  aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Cras ultrices hendrerit nisl.</p>
+                  </div>
+                  <div class="col-xs-12 col-md-4">
+                    <h3>Consectetur adipiscing elit</h3>
+                    <img style="margin-top: 30px;" src="./static/assets/images/profil.jpg" class="img-responsive" alt="">
+                  </div>
+                  <div class="col-xs-12 col-md-6">
+                    <h3>Consectetur adipiscing elit</h3>
+                    <p class="tab-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas luctus at sem quis varius. 
+                    Class aptent I love java taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Cras ultrices hendrerit nisl.</p>
+                  </div>
+                  <div class="col-xs-12 col-md-4">
+                    <img style="margin-top: 30px;" src="./static/assets/images/profil.jpg" class="img-responsive" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>                     
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer-container text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <p>© UNTITLED | Website created with <a href="http://www.mashup-template.com/" title="Create website with free html template">Mashup Template</a>/<a href="https://www.unsplash.com/" title="Beautiful Free Images">Unsplash</a></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function (event) {
+      initializeOriginalTexts();
+      navActivePage();
+    });
+
+    function initializeOriginalTexts() {
+      var tabContents = document.querySelectorAll(".tab-content");
+      tabContents.forEach(function(content) {
+        content.setAttribute("data-original-text", content.innerHTML);
+      });
+    }
+
+    function showTabContent(tab) {
+      var tabContents = document.getElementsByClassName("tab-content");
+      for (var i = 0; i < tabContents.length; i++) {
+        tabContents[i].style.display = "none";
+      }
+      document.getElementById(tab + "-content").style.display = "block";
+    }
+
+    function searchTabContent(tab) {
+      var searchTerm = document.querySelector(".search-input").value.toLowerCase();
+      var tabContent = document.getElementById(tab + "-content");
+      var originalText = tabContent.getAttribute('data-original-text');
+      var highlightedText = originalText.replace(new RegExp(searchTerm, 'gi'), function(match) {
+        return '<span class="highlight">' + match + '</span>';
+      });
+
+      tabContent.innerHTML = searchTerm === '' ? originalText : highlightedText;      
+    }
+
+    function searchAndScroll() {
+  var searchTerm = document.querySelector("#searchInput").value.toLowerCase();
+  if (searchTerm === "") return;
+
+  var tabContents = document.querySelectorAll(".tab-content");
+  var found = false;
+  
+  tabContents.forEach(function(content) {
+    var text = content.getAttribute('data-original-text').toLowerCase();
+    if (text.includes(searchTerm)) {
+      content.innerHTML = text.replace(new RegExp(searchTerm, 'gi'), function(match) {
+        return '<span class="highlight">' + match + '</span>';
+      });
+      content.style.display = "block";
+      if (!found) {
+        content.scrollIntoView({ behavior: "smooth" });
+        found = true;
+      }
+    } else {
+      content.style.display = "none";
+    }
+  });
+}
+showTabContent('java');
+  </script>
+
+  <script type="text/javascript" src="./static/main.70a66962.js"></script>
+</body>
+
+</html>
