@@ -72,6 +72,6 @@ def submit_form():
 # @app.route('/blog/2020')
 # def blog1():
 #     return 'This is my Bharati'
-# app.run()
+app.run()
 
 
